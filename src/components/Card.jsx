@@ -1,10 +1,11 @@
-function Card(props) {
+import styles from './Card.module.css';
+function Card({ id, name, price, brand }) {
   return (
-    <div>
-      <h2>{props.name}</h2>
-      <p>{props.price}</p>
-      <p>{props.brand}</p>
-    </div>
+    <article className={styles['card']} key={id}>
+      <h2>{name}</h2>
+      <p>{price}</p>
+      <p>{brand}</p>
+    </article>
   );
 }
-export { Card };
+export default Card;
